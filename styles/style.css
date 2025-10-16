@@ -50,6 +50,21 @@ ol {
   background-color: #d9d9d9;
 }
 
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 133px 30px;
+}
+
+.content {
+  display: flex;
+  width: 1140px;
+  align-items: flex-end;
+  gap: 30px;
+  
+}
+
 .visually-hidden {
   position: absolute;
   inline-size: 1px;
@@ -60,23 +75,9 @@ ol {
   white-space: nowrap;
 }
 
-.page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.content {
-  display: flex;
-  width: 1140px;
-  align-items: flex-end;
-  gap: 30px;
-  margin: 133px 30px;
-}
-
 .search-form {
   display: flex;
-  gap: 40px;
+  gap: 10px;
   align-items: flex-start;
   justify-content: space-between;
 }
@@ -137,6 +138,7 @@ ol {
   line-height: 100%;
   letter-spacing: 0%;
   color: #fff;
+  padding-bottom: 5px;
 }
 
 .title {
@@ -188,7 +190,7 @@ ol {
 
 .search-form__checkbox-list {
   display: flex;
-  gap: 15px;
+  gap: 5px;
 }
 
 .search-form__fieldset {
@@ -197,64 +199,91 @@ ol {
 
 .search-form__label {
   display: flex;
-  align-items: center;
   width: fit-content;
+  align-items: center;
   gap: 5px;
 }
 
 .search-form__textfield {
-  padding: 2px 0;
-font-weight: 400;
-font-size: 14px;
+  font-family: Fira Sans Condensed, sans-serif;
+  padding: 0;
+  width: 225px;
+  font-weight: 400;
+  font-size: 18px;
+  border: none;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
 
-border: none;
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-    color: #fff;
-    background-color: transparent;
-    appearance: none;
-
+  color: #fff;
+  background-color: transparent;
+  appearance: none;
 }
 
 .search-form__textfield::placeholder {
-    color: rgb(255 255 255 / 0.7);
+  color: rgb(255 255 255 / 0.7);
 }
 
 .search-form__textfield:focus {
-    outline: none; /* Убираем стандартную обводку */
+  outline: none; /* Убираем стандартную обводку */
 }
 
- /* пока не работает - Добавляем границу лейблу при фокусе */
+/* пока не работает - Добавляем границу лейблу при фокусе */
 
 /*.search-form__label:has(.search-form__fieldset:focus-visible) {
     border: 1px solid #fff;
 }*/
 
 .search-form__pseudo-checkbox {
-    height: 19px;
-    width: 19px;
-    border: 1px solid #fff;
-    padding: 1px; /* Внутренний отступ */
-    display: inline-block; /* Чтобы псевдоэлемент был блочным */
+  height: 19px;
+  width: 19px;
+  border: 1px solid #fff;
+  padding: 1px; /* Внутренний отступ */
+  display: inline-block; /* Чтобы псевдоэлемент был блочным */
+}
+
+.search-form__label-text {
+  font-family: Fira Sans Condensed, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #fff;
 }
 
 .search-form__pseudo-checkbox::after {
-    content: ""; /* Обязательное свойство для отображения псевдоэлемента */
-    display: block;
-    background-color: #fff;
-    width: 100%;
-    height: 100%;
-    opacity: 0; /* Скрываем псевдоэлемент изначально */
+  content: ""; /* Обязательное свойство для отображения псевдоэлемента */
+  display: block;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Скрываем псевдоэлемент изначально */
 }
 
 /* При активации чекбокса делаем псевдоэлемент непрозрачным */
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* Подчёркивание текста при наведении на лейбл чекбокса */
 .search-form__label:hover .search-form__label-text {
-    text-decoration: underline;
-} 
+  text-decoration: underline;
+}
 
+.button {
+  color: #fff;
+  background: transparent;
+  border: 1px solid #fff;
+  font-size: 22px;
+  font-weight: 500;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  padding: 6px 0;
+}
 
+.search-form__submit-button {
+  align-self: flex-end;
+  width: 194px;
+}
+
+.more-button {
+  width: 100%;
+}
